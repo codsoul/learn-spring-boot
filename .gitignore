@@ -15,3 +15,7 @@ spring-boot-learn/springboot-helloworld/target/
 *.project
 *.prefs
 spring-boot-learn/springboot-helloworld/.settings/
+spring-boot-learn/springboot-Swagger2/mvnw
+spring-boot-learn/springboot-Swagger2/mvnw.cmd
+/target
+target/
