@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="zh-CN" http-equiv="Content-Language" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Latte API</title>
+
+
+</head>
+<body>
+	<h1>Test API</h1>
+
+	<div style="width: 50%; height: 1000px; float:left; overflow:scroll;">
+		<h3>0.Hello World</h3>
+		<fieldset>
+			<form action="../hello" method="post">
+				<input type="submit" />
+			</form>
+		</fieldset>
+
+		<h3>1.Sign Up/Login</h3>
+		<fieldset>
+			<legend>API 1.1 Sign Up</legend>
+			<form action="../register" method="post"
+				enctype="multipart/form-data" autocomplete="off">
+				loginType: <select name="loginType">
+					<option value="1">1-Email</option>
+				</select> email:<input type="text" name="email" value="" /> password:<input
+					type="password" name="password" value="" /> firstName:<input
+					type="text" name="firstName" value="" /> lastName:<input
+					type="text" name="lastName" value="" /> userImage:<input
+					type="file" name="userImage" value="" /> lang:<select name="lang">
+					<option value="en_US">en_US</option>
+					<option value="zh_HK">zh_HK</option>
+					<option value="zh_CN">zh_CN</option>
+				</select> entry:<select name="entry">
+					<option value="1">1-APP</option>
+					<option value="2">2-Web</option>
+				</select> deviceType:<select name="deviceType">
+					<option value="1">1-IOS</option>
+					<option value="2">2-AOS</option>
+				</select> deviceId:<input type="text" name="deviceId" value="XXXX001" />
+				deviceToken:<input type="text" name="deviceToken" value="ABCD1234" />
+				<input type="submit" />
+			</form>
+		</fieldset>
+
+		<fieldset>
+			<legend>API 1.2 Login</legend>
+			<form action="../login" method="post" autocomplete="off">
+				<input type="hidden" name="encData" value="" /> loginType:<select
+					name="loginType">
+					<option value="1">1-Email</option>
+				</select> email:<input type="text" name="email" value="" /> password:<input
+					type="password" name="password" value="" /> lang:<select
+					name="lang">
+					<option value="en_US">en_US</option>
+					<option value="zh_HK">zh_HK</option>
+					<option value="zh_CN">zh_CN</option>
+				</select> deviceType:<select name="deviceType">
+					<option value="1">1-IOS</option>
+					<option value="2">2-AOS</option>
+				</select> deviceId:<input type="text" name="deviceId" value="XXXX001" />
+				deviceToken:<input type="text" name="deviceToken" value="ABCD1234" />
+				appVersion:<input type="text" name="appVersion" value="" /> <input
+					type="button" value="submit" onclick="getEncData(this.form)" />
+			</form>
+		</fieldset>
+	</div>
+
+
+	<div style="width: 50%; height: 1000px; float:left; overflow:scroll;">
+		<h3>Result</h3>
+		<textarea id="myTextArea" rows="50" style="width: 98%"></textarea>
+	</div>
+</body>
+</html>
