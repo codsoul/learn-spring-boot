@@ -19,3 +19,5 @@ spring-boot-learn/springboot-Swagger2/mvnw
 spring-boot-learn/springboot-Swagger2/mvnw.cmd
 /target
 target/
+spring-boot-learn/springboot-MyBatis/src/main/webapp/.well-known/
+spring-boot-learn/springboot-MyBatis/.settings/
